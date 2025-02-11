@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine Đặc Biệt</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Shrimp Detector</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Chúc Mừng Ngày Valentine! 💖</h1>
-        <p>Gửi đến người anh yêu thương nhất!</p>
-        <button id="loveButton">Nhấn vào đây</button>
-        <p id="message"></p>
+    <div class="screen" id="screen1">
+        <h1>SHRIMP DETECTOR!!!</h1>
+        <button class="start-btn" onclick="nextScreen(2)">START</button>
+        <button class="no-way-btn" onclick="nextScreen(3)">NO WAY!</button>
     </div>
+
+    <div class="screen hidden" id="screen2">
+        <h1>Are you a <span class="highlight">SHRIMP</span>????</h1>
+        <button onclick="nextScreen(4)">YES</button>
+        <button onclick="nextScreen(3)">NO WAY!</button>
+    </div>
+
+    <div class="screen hidden" id="screen3">
+        <h1>Are you sitting like this?????</h1>
+        <img src="shrimp_sitting.jpg" alt="Shrimp Sitting">
+        <button onclick="nextScreen(4)">You got points.</button>
+    </div>
+
+    <div class="screen hidden" id="screen4">
+        <h1>This is a <span class="highlight">SHRIMP</span> test!!</h1>
+        <img src="shrimp_test.jpg" alt="Shrimp Test">
+        <button onclick="nextScreen(5)">NEXT PAGE</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
